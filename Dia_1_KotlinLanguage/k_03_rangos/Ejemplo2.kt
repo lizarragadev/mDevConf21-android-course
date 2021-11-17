@@ -9,7 +9,7 @@ package k_03_rangos
  * */
 
 fun main() {
-    val rangoLetras = '@'..'z'
+    val rangoLetras = 'a'..'z'
     for(i in rangoLetras) {
         print("$i, ")
     }
