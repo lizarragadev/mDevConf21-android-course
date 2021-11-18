@@ -44,7 +44,7 @@ fun PantallaPrincipal() {
     // de forma lineal horizontalmente (Uno al lado de otro)
     
     Dia_2_01_JetpackComposeBasicsTheme {
-        Surface {
+        Surface(Modifier.fillMaxSize()) {
             //FilaDeTextos()
             //FilaHorizontalTextos()
             ItemLista()
@@ -84,7 +84,7 @@ fun FilaHorizontalTextos() {
 
 @Composable
 fun ItemLista() {
-    Column(Modifier.fillMaxSize()) {
+    Column(Modifier.fillMaxWidth()) {
         ContenidoItem(nombre = "Brais Moure", tituloCharla = "Hola SwiftUI")
         ContenidoItem(nombre = "Antonio Leiva", tituloCharla = "Jetpack Compose")
         ContenidoItem(nombre = "Anahi Salgado", tituloCharla = "State Hoisting")
@@ -93,7 +93,7 @@ fun ItemLista() {
 
 @Composable
 fun ContenidoItem(nombre: String, tituloCharla: String) {
-    Row(modifier = Modifier.padding(all = 10.dp)) {
+    Row(modifier = Modifier.padding(all = 10.dp).fillMaxWidth()) {
         Image(painter = painterResource(id = R.drawable.pngwing),
             contentDescription = "Imagen",
             modifier = Modifier
